@@ -12,7 +12,7 @@
         <!--Meter View Controller-->
         <scene sceneID="X5B-da-Iep">
             <objects>
-                <viewController id="GEx-tl-pc5" customClass="MeterViewController" customModule="WUMP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GEx-tl-pc5" customClass="MeterViewController" customModule="QTrace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lwK-QO-amI"/>
                         <viewControllerLayoutGuide type="bottom" id="99t-9p-1mc"/>
@@ -34,8 +34,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUh-Z9-c7P">
+                                <rect key="frame" x="85" y="57" width="193" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quake Trace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8C-Me-wsY">
-                                <rect key="frame" x="91" y="57" width="193" height="82"/>
+                                <rect key="frame" x="85" y="466" width="193" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
@@ -47,6 +54,7 @@
                     <connections>
                         <outlet property="meterView" destination="0YQ-7N-5Iw" id="hqq-oa-hJA"/>
                         <outlet property="myNamberLabel" destination="a8C-Me-wsY" id="CvV-Np-N3R"/>
+                        <outlet property="state" destination="cUh-Z9-c7P" id="2a6-wG-ZZZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eO-x3-1VN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,7 +64,7 @@
         <!--Login View Controller-->
         <scene sceneID="XdO-fS-3Tc">
             <objects>
-                <viewController id="8XX-Dz-w2P" customClass="LoginViewController" customModule="WUMP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8XX-Dz-w2P" customClass="LoginViewController" customModule="QTrace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lZA-w3-KIa"/>
                         <viewControllerLayoutGuide type="bottom" id="QcB-mH-qRx"/>

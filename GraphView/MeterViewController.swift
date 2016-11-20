@@ -8,12 +8,13 @@
 
 import UIKit
 import SFGaugeView
-
+import AVFoundation
 
 class MeterViewController: UIViewController {
     
+    @IBOutlet weak var state: UILabel!
     @IBOutlet weak var myNamberLabel: UILabel!
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -29,7 +30,7 @@ class MeterViewController: UIViewController {
         self.getUserInfo()
         let helloWorldTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(MeterViewController.getUserInfo), userInfo: nil, repeats: true)
 
-        
+        _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(MeterViewController.onOrOffQuake), userInfo: nil, repeats: true)
 
     }
     @IBAction func backButtonTapped(_ sender: AnyObject) {
@@ -72,6 +73,60 @@ class MeterViewController: UIViewController {
         self.SFGauge.currentLevel = Int(curentLevelOfWater as! Double)
         
     }
+    
+    func onOrOffQuake() {
+        let url = URL(string: "http://pubsub.pubnub.com/history/sub-c-b10662c0-aeb6-11e6-b0d5-0619f8945a4f/alarm/0/1")
+        
+        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+            guard error == nil else {
+                print(error)
+                return
+            }
+            guard let data = data else {
+                print("Data is empty")
+                return
+            }
+            
+            let json = try! JSONSerialization.jsonObject(with: data, options: [])
+            
+            let array = json
+            
+            let myArray = array as! NSArray
+            
+            let myNumber: NSDictionary = myArray[0] as! NSDictionary
+            
+            
+            let myValue = myNumber.allValues
+            
+            let myFirstValue = myValue.first
+            
+            print(myFirstValue!)
+            
+            if myFirstValue as! Double == 0{
+                print("Good")
+            }
+            else{
+                DispatchQueue.main.sync {
+                    self.state.text = "Duck and cover"
+                    self.state.backgroundColor = UIColor.red
+
+                }
+
+                let systemSoundID: SystemSoundID = 1005
+                // to play sound
+                AudioServicesPlaySystemSound (systemSoundID)
+                let alert = UIAlertController(title: "Alert Quake", message: "Alert family to be safe please!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+        }
+        
+        task.resume()
+      
+        
+    }
+
     
     func meterConfig(){
         //Meter config
