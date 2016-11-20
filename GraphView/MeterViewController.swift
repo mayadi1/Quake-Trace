@@ -103,8 +103,10 @@ class MeterViewController: UIViewController {
             print(myFirstValue!)
             
             if myFirstValue as! Double == 0{
-                print("Good")
-            }
+                DispatchQueue.main.sync {
+                    self.state.text = "Good"
+                    self.state.backgroundColor = UIColor.gray
+                }            }
             else{
                 DispatchQueue.main.sync {
                     self.state.text = "Duck and cover"
