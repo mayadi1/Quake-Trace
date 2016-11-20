@@ -24,7 +24,7 @@
 		1807A9461DCFF0AE00DC90D5 /* MeterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeterViewController.swift; path = GraphView/MeterViewController.swift; sourceTree = "<group>"; };
 		181DF3CB1DCE9BF20021420F /* ScrollableGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphView.swift; sourceTree = "<group>"; };
 		18BCCEC81DCEA3C1000ECFD8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2918399E1C72E6A400753A45 /* WUMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WUMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2918399E1C72E6A400753A45 /* QTrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QTrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		291839A11C72E6A400753A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		291839A61C72E6A400753A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		291839A81C72E6A400753A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		2918399F1C72E6A400753A45 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2918399E1C72E6A400753A45 /* WUMP.app */,
+				2918399E1C72E6A400753A45 /* QTrace.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2918399D1C72E6A400753A45 /* WUMP */ = {
+		2918399D1C72E6A400753A45 /* QTrace */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 291839B01C72E6A400753A45 /* Build configuration list for PBXNativeTarget "WUMP" */;
+			buildConfigurationList = 291839B01C72E6A400753A45 /* Build configuration list for PBXNativeTarget "QTrace" */;
 			buildPhases = (
 				541B61375E65060BAC8AB14E /* [CP] Check Pods Manifest.lock */,
 				2918399A1C72E6A400753A45 /* Sources */,
@@ -133,9 +133,9 @@
 			);
 			dependencies = (
 			);
-			name = WUMP;
+			name = QTrace;
 			productName = GraphView;
-			productReference = 2918399E1C72E6A400753A45 /* WUMP.app */;
+			productReference = 2918399E1C72E6A400753A45 /* QTrace.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +166,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2918399D1C72E6A400753A45 /* WUMP */,
+				2918399D1C72E6A400753A45 /* QTrace */,
 			);
 		};
 /* End PBXProject section */
@@ -399,7 +399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		291839B01C72E6A400753A45 /* Build configuration list for PBXNativeTarget "WUMP" */ = {
+		291839B01C72E6A400753A45 /* Build configuration list for PBXNativeTarget "QTrace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				291839B11C72E6A400753A45 /* Debug */,

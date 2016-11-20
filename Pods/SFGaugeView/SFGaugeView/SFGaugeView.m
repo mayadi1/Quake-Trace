@@ -62,7 +62,7 @@ static const CGFloat CUTOFF = 0.5;
 {
     [self drawBg];
     [self drawNeedle];
-    [self drawLabels];
+  //  [self drawLabels];
     [self drawImageLabels];
 }
 

@@ -70,7 +70,7 @@ class MeterViewController: UIViewController {
         task.resume()
         self.myNamberLabel.text = "\(curentLevelOfWater)"
         self.SFGauge.currentLevel = Int(curentLevelOfWater as! Double)
-
+        
     }
     
     func meterConfig(){
